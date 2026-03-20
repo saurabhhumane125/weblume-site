@@ -38,9 +38,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md border-b border-[var(--border-color)]"
+            ? "bg-white/70 dark:bg-black/70 backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)]"
             : "bg-transparent"
         }`}
         style={{ height: "var(--nav-height)" }}

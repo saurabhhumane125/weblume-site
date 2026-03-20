@@ -85,7 +85,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-[#6B7280] text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors duration-200"
+                    className="w-full px-6 py-4 bg-[#1A1A1A] border border-[#333] rounded-xl text-white placeholder:text-[#6B7280] text-[16px] focus:outline-none focus:border-[#666] transition-all hover:border-[#444] duration-300"
                   />
                 </div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-[#6B7280] text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors duration-200"
+                    className="w-full px-6 py-4 bg-[#1A1A1A] border border-[#333] rounded-xl text-white placeholder:text-[#6B7280] text-[16px] focus:outline-none focus:border-[#666] transition-all hover:border-[#444] duration-300"
                   />
                 </div>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                     required
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors duration-200 appearance-none cursor-pointer [&>option]:bg-[#111827] [&>option]:text-white"
+                    className="w-full px-6 py-4 bg-[#1A1A1A] border border-[#333] rounded-xl text-white text-[16px] focus:outline-none focus:border-[#666] transition-all hover:border-[#444] duration-300 appearance-none cursor-pointer [&>option]:bg-[#1A1A1A] [&>option]:text-white"
                   >
                     <option value="" disabled className="text-[#6B7280]">
                       Project Type
@@ -125,7 +125,7 @@ export default function Contact() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors duration-200 appearance-none cursor-pointer [&>option]:bg-[#111827] [&>option]:text-white"
+                    className="w-full px-6 py-4 bg-[#1A1A1A] border border-[#333] rounded-xl text-white text-[16px] focus:outline-none focus:border-[#666] transition-all hover:border-[#444] duration-300 appearance-none cursor-pointer [&>option]:bg-[#1A1A1A] [&>option]:text-white"
                   >
                     <option value="" disabled className="text-[#6B7280]">
                       Budget Range
@@ -147,7 +147,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-[#6B7280] text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors duration-200 resize-none"
+                    className="w-full px-6 py-5 bg-[#1A1A1A] border border-[#333] rounded-xl text-white placeholder:text-[#6B7280] text-[16px] focus:outline-none focus:border-[#666] transition-all hover:border-[#444] duration-300 resize-none"
                   />
                 </div>
 
@@ -155,7 +155,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-white text-[var(--text-primary)] font-medium text-[15px] rounded-xl hover:bg-[var(--accent)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full flex items-center justify-center gap-3 px-8 py-5 mt-2 bg-[var(--accent)] text-white font-semibold text-[16px] rounded-xl hover:-translate-y-0.5 shadow-[0_0_40px_-10px_rgba(139,92,246,0.6)] hover:shadow-[0_0_50px_-5px_rgba(139,92,246,0.8)] hover:bg-[var(--accent-hover)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {status === "loading" ? (
                     <>
