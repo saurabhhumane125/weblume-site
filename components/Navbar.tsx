@@ -38,10 +38,10 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 border-b ${
           scrolled
-            ? "bg-white/70 dark:bg-black/70 backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)]"
-            : "bg-transparent"
+            ? "bg-[#030407]/70 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)]"
+            : "bg-transparent border-transparent"
         }`}
         style={{ height: "var(--nav-height)" }}
       >
@@ -49,8 +49,11 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="/"
-            className="text-[20px] font-bold tracking-[-0.02em] text-[var(--text-primary)]"
+            className="flex items-center gap-2 text-[22px] font-bold tracking-[-0.02em] text-white group"
           >
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[var(--accent)] to-[#06b6d4] flex items-center justify-center text-white shadow-[0_0_15px_rgba(139,92,246,0.5)] group-hover:shadow-[0_0_25px_rgba(139,92,246,0.8)] transition-all">
+              W
+            </div>
             Weblume
           </a>
 
@@ -60,23 +63,23 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[14px] tracking-[0.02em] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-200"
+                className="text-[14px] font-medium text-[var(--text-secondary)] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-300"
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="outline" size="sm" href="#contact">
+            <a href="#contact" className="px-5 py-2.5 rounded-full text-white font-medium text-[14px] bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]">
               Contact ↗
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-[var(--text-primary)]"
+            className="md:hidden p-2 text-white hover:text-[var(--accent)] transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </Container>
       </nav>
@@ -85,11 +88,11 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-[#06080F]/90 flex flex-col items-center justify-center gap-8"
             style={{ paddingTop: "var(--nav-height)" }}
           >
             {navLinks.map((link, i) => (
@@ -100,7 +103,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 + 0.1, duration: 0.4 }}
-                className="text-[28px] font-semibold text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                className="text-[32px] font-bold text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[var(--accent)] hover:to-[#06b6d4] transition-all"
               >
                 {link.label}
               </motion.a>
@@ -112,15 +115,11 @@ export default function Navbar() {
                 delay: navLinks.length * 0.1 + 0.1,
                 duration: 0.4,
               }}
+              className="mt-8"
             >
-              <Button
-                variant="primary"
-                size="lg"
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-              >
-                Contact ↗
-              </Button>
+              <a href="#contact" onClick={() => setMobileOpen(false)} className="px-8 py-4 rounded-full text-white font-semibold text-[18px] bg-gradient-to-r from-[var(--accent)] to-[#06b6d4] shadow-[0_0_30px_rgba(139,92,246,0.6)]">
+                Start a Project
+              </a>
             </motion.div>
           </motion.div>
         )}

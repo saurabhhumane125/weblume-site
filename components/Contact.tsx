@@ -51,15 +51,18 @@ export default function Contact() {
     <section id="contact" className="py-24 md:py-32 bg-[var(--background-dark)]">
       <Container>
         <div className="max-w-[680px] mx-auto text-center">
-          <AnimateOnScroll>
-            <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-white leading-[1.1] mb-4">
-              Let&apos;s build something.
-            </h2>
-            <p className="text-[18px] text-[#9CA3AF] mb-12">
+          {/* Form Side taking 6 columns */}
+          <div className="lg:col-span-6 flex flex-col justify-center max-w-xl mx-auto">
+            <AnimateOnScroll>
+              <h2 className="text-[clamp(44px,8vw,64px)] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[var(--text-secondary)] leading-[1.05] tracking-tight mb-6 drop-shadow-sm">
+                Let's build <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[#06b6d4]">something.</span>
+              </h2>
+              <p className="text-[16px] md:text-[18px] text-[var(--text-secondary)] font-medium mb-12">
               Have a project in mind? Tell us about it and we&apos;ll get back
               to you within 24 hours.
             </p>
           </AnimateOnScroll>
+          </div>
 
           {status === "success" ? (
             <AnimateOnScroll>
