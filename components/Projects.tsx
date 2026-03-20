@@ -17,8 +17,8 @@ export default function Projects() {
           <div className="lg:col-span-4 flex flex-col pt-4 pr-0 lg:pr-8">
             <AnimateOnScroll>
               <div className="inline-block text-[12px] font-bold tracking-widest uppercase text-[var(--accent)] mb-4">Portfolio</div>
-              <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-white leading-[1.1] mb-6">
-                Projects we've shipped.
+              <h2 className="text-[clamp(36px,6vw,56px)] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-[1.05] tracking-tight mb-6 drop-shadow-sm">
+                Projects we've <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent)] to-[#ec4899]">shipped.</span>
               </h2>
               <p className="mt-4 md:mt-2 text-[15px] md:text-[17px] text-[var(--text-secondary)] font-medium max-w-sm leading-relaxed">
                 A selection of digital products we have designed and engineered for our clients. Built clean, built right.

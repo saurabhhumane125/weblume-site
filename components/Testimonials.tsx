@@ -30,8 +30,8 @@ export default function Testimonials() {
           <div className="lg:col-span-4 flex flex-col justify-start pt-4 lg:pt-8 pr-0 lg:pr-8">
             <AnimateOnScroll>
               <div className="inline-block text-[12px] font-bold tracking-widest uppercase text-[#ec4899] mb-4">Client Stories</div>
-              <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-white leading-[1.1] mb-6">
-                The impact of our work.
+              <h2 className="text-[clamp(36px,6vw,56px)] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-[1.05] tracking-tight mb-6 drop-shadow-sm">
+                The impact of our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec4899] to-[#06b6d4]">work.</span>
               </h2>
               <p className="mt-4 md:mt-2 text-[15px] md:text-[16px] text-[var(--text-secondary)] font-medium max-w-sm leading-relaxed">
                 We design software that doesn't just look stunning, but delivers measurable results. Here is what our partners say about the experience.

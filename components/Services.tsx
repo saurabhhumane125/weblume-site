@@ -50,8 +50,8 @@ export default function Services() {
           <div className="lg:col-span-4 flex flex-col pt-4 pr-0 lg:pr-8">
             <AnimateOnScroll>
               <div className="inline-block text-[12px] font-bold tracking-widest uppercase text-[var(--accent-secondary)] mb-4">Capabilities</div>
-              <h2 className="text-[clamp(32px,5vw,48px)] font-bold text-white leading-[1.1] mb-6">
-                Solutions built with precision.
+              <h2 className="text-[clamp(36px,6vw,56px)] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 leading-[1.05] tracking-tight mb-6 drop-shadow-sm">
+                Solutions built with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-secondary)] to-[var(--accent)]">precision.</span>
               </h2>
               <p className="mt-4 md:mt-2 text-[15px] md:text-[17px] text-[var(--text-secondary)] font-medium max-w-sm leading-relaxed">
                 We engineer digital solutions that are as beautiful under the hood as they are on the screen, using bleeding-edge stacks.
